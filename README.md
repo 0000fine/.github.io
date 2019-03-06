@@ -1,37 +1,4 @@
-## 基于Ardunio UNO开发板的童车倒车报警系统
-
-You can use the [editor on GitHub](https://github.com/0000fine/.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/0000fine/.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# **Bold**1.项目名称：基于Arduino UNO开发板的童车倒车报警系统
+## **Bold** 开发环境：Ardnino UNO开发板+HC-SR04模块+LCD1602+光敏电阻+蜂鸣器+LED灯+马达驱动器
+    项目描述：该项目主要利用Arduino软件编写HC-SR04（超声波模块）、LCD1602、蜂鸣器、LED灯、马达驱动器和光敏电阻的代码，将已完成的代码烧录到Arduino UNO开发板中，HC-SR04（超声波模块）会检测车后方的实时距离并显示在LCD1602屏幕上，当距离小于20厘米时，蜂鸣器、LED（红）灯、会发出警报并且由马达驱动器驱动的车轮也会停止转动以保证童车的安全。光敏电阻检测到亮度为暗时，自动打开车LED（白）灯。
+    
