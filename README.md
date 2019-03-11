@@ -28,11 +28,17 @@
 ### 数据库：
 RDBMS 关系数据库管理系统:     
     表（table）<br>    数据库（database）<br>    列（字段）<br>    行（记录）<br> 主键（唯一）<br>外键（关联两个表）<br>索引（目录）
-<br>### 基础命令：
+### 基础命令：
 <br>*          create database 数据库名;  创建
 <br>*          drop database 数据库名； 删除
 <br>*          show databases； 查看数据库
 <br>*          use 数据库名； 使用数据库
 <br>*          show tables； 查看表
+### 字符集：（因为计算机只能识别二进制）
+<br>* ASSCII: 文字符号.（ANSI 20世纪60年代） ISO-646
+<br>* Unicode: (全世界语言、文字和符号) ISO-10646
+<br>* UTF-16
+<br>* UTF-8
+<br>* 汉字常见字符集：GB2312 GB13000 GBK GB18030
 
 
