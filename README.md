@@ -56,53 +56,53 @@ RDBMS 关系数据库管理系统:
 ### SQL：（结构化查询语言）数据库语言
 <br> 分类：
 * DDL（数据定义语言）：定义数据库对象，创建库、表、列等.
-++ 创建数据库：create database 数据库名 character set utf8;
-++ 创建表：create table 表名（
+<br>++ 创建数据库：create database 数据库名 character set utf8;
+<br>++ 创建表：create table 表名（
 <br> 列名1 列的数据类型 [约束],
 <br> 列名2 列的数据类型 [约束],
 <br> ...... .......    .....
 <br> 列名N 列的数据类型 [约束]
 <br> ）;
-++ 添加一列：Alter table 表名 add 列名 数据类型；
-++ 修改字段类型：Alter table 表名 modify 字段名 数据类型；
-++ 删除列： Alter table 表名 drop 字段名；
-++ 修改表名：Alter table 原表名 to 新表名；
-++ 查看字段信息：desc 表名；
-++ 查看表的创建细节：show create table 表名；
-++ 修改字符集：Alter table 表名 character set 字符集；
-++ 修改表的列名：Alter table 表名 change 原列名 新列名 数据类型；
-++ 删除表:drop 表名；
+<br>++ 添加一列：Alter table 表名 add 列名 数据类型；
+<br>++ 修改字段类型：Alter table 表名 modify 字段名 数据类型；
+<br>++ 删除列： Alter table 表名 drop 字段名；
+<br>++ 修改表名：Alter table 原表名 to 新表名；
+<br>++ 查看字段信息：desc 表名；
+<br>++ 查看表的创建细节：show create table 表名；
+<br>++ 修改字符集：Alter table 表名 character set 字符集；
+<br>++ 修改表的列名：Alter table 表名 change 原列名 新列名 数据类型；
+<br>++ 删除表:drop 表名；
 ———————————————————————————————————————————
 * DML（数据操作语言）：操作表中的记录.
-++ 查询表中的所有数据：select * from 表名；or select * from 表名\G；
-++ 增加表的记录：insert into 表名（字段名1，字段名2，...） values（列值1，列值2，...）；
-++ 改表的记录：update 表名 set 列名1=值1，列名2=值2，... where 列名1=值1，列名2=值2，...；
-++ 修改数据库密码(1)：
+<br>++ 查询表中的所有数据：select * from 表名；or select * from 表名\G；
+<br>++ 增加表的记录：insert into 表名（字段名1，字段名2，...） values（列值1，列值2，...）；
+<br>++ 改表的记录：update 表名 set 列名1=值1，列名2=值2，... where 列名1=值1，列名2=值2，...；
+<br>++ 修改数据库密码(1)：
 <br> use mysql；
 <br> **(5.7版本以前)** update user set password=password('新密码') where user='root';
 <br> **(5.7版本以后)** update user set authentication_string=password('新密码') where user='root' and Host='localhost';
 <br> **刷新MySQL的系统权限相关表** flush privileges;
 ++ 修改数据库密码（2）：
 <br> mysqladmin -u root -p password 新密码;
-++ 删除表的记录:
+<br>++ 删除表的记录:
 <br> delete from 表名 [where 列名=[值]]；
 <br> truncate table 表名；
 <br> **deleted 和 truncate 的区别** ：deleted[表结构还在，数据可找回]，truncate[删除表，建新表，数据库不可找回]
 ———————————————————————————————————————————
 * DQL（数据查询语言）：查询数据库.
-++ 查询所有列：select * from 表名；
-++ 结果集：内存中，虚拟表.
-++ 查询指定的列：select 列1，列2，...  from 表名；
-++ 查询条件：【where】
+<br>++ 查询所有列：select * from 表名；
+<br>++ 结果集：内存中，虚拟表.
+<br>++ 查询指定的列：select 列1，列2，...  from 表名；
+<br>++ 查询条件：【where】
 <br> 运行符以及关键字：
-<br> ____ =、！=、<>(不等于)、<、>、<=、>=
-<br> ____ Between......and.......
-<br> ____ IN(set):固定范围值
-<br> ____ is null:(为空) 、 is not null(不为空)
-<br> ____ and:与
-<br> ____ or:或
-<br> ____ not:非
-++ 模糊查询:(关键字【like】)
+<br>*  ____ =、！=、<>(不等于)、<、>、<=、>=
+<br>*  ____ Between......and.......
+<br>*  ____ IN(set):固定范围值
+<br>* ____ is null:(为空) 、 is not null(不为空)
+<br>*  ____ and:与
+<br>* ____ or:或
+<br>*  ____ not:非
+<br>++ 模糊查询:(关键字【like】)
 <br> **通配符：**
 <br> _ :任意一个字符；
 <br> % :任意0~N个字符； 例：包含 ： %s%
