@@ -12,15 +12,15 @@
 <br>2、本机 navicat软件（验证远程连接）
 ## 二 、mysql配置
 1、在远程主机的本机   使用root用户连接mysql
-<br>命令：mysql -u root -p
-<br>备注 ： mysql -u 最高权限用户名 -p   再输入密码进入
+* 命令：mysql -u root -p
+* 备注 ： mysql -u 最高权限用户名 -p   再输入密码进入
 <br>2、设置用户配置项
 <br>(1) 查看用户信息
-<br>select host,user,plugin,authentication_string from mysql.user;
-<br>备注：host为 % 表示不限制ip   localhost表示本机使用    plugin非mysql_native_password 则需要修改密码
+* select host,user,plugin,authentication_string from mysql.user;
+* 备注：host为 % 表示不限制ip   localhost表示本机使用    plugin非mysql_native_password 则需要修改密码
 <br>(2)修改用户密码
-<br>ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword'; 
-<br>备注：更新一下用户的密码 root用户密码为newpassword
+* ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword'; 
+* 备注：更新一下用户的密码 root用户密码为newpassword
 
 
 
@@ -28,7 +28,13 @@
 ### 数据库：
 数据库对象：如：表、视图、存储过程、事件、查询、函数、报表和触发器等...
 RDBMS 关系数据库管理系统:     
-    表（table）<br>    数据库（database）<br>    列（字段）<br>    行（记录）<br> 主键（唯一）<br>外键（关联两个表）<br>索引（目录）
+* 表（table）
+* 数据库（database）
+* 列（字段）
+* 行（记录）
+* 主键（唯一）
+* 外键（关联两个表）
+* 索引（目录）
 ### 基础命令：
 * create database 数据库名;  创建
 * drop database 数据库名； 删除
@@ -37,17 +43,24 @@ RDBMS 关系数据库管理系统:
 * show tables； 查看表
 ### 字符集：（因为计算机只能识别二进制）
 * ASSCII: 文字符号.（ANSI 20世纪60年代） ISO-646
-<br>* Unicode: (全世界语言、文字和符号) ISO-10646
-<br>* UTF-16
-<br>* UTF-8
-<br>* 汉字常见字符集：GB2312 GB13000 GBK GB18030
+* Unicode: (全世界语言、文字和符号) ISO-10646
+* UTF-16
+* UTF-8
+* 汉字常见字符集：GB2312 GB13000 GBK GB18030
 ### 存储引擎：（5.5版本）
-分类：<br>MYISAM：不支持事务、外键，但是访问速度快;<br>INNODB:支持事务提交、回滚和崩溃恢复，但是占空间大（保留数据与索引） 5.5版本默认选择
-<br>MEMORY:使用内存存储 * *.frm*  优点：访问速度快  缺点：服务器关闭，数据丢失，表存在.
-<br>**事务：是指作为单个逻辑单元执行的一系列操作，要么完全执行，要么完全不执行.**
-<br>**扩展名：<br> *.frm*:存储表定义 *MYD*:（MYData，存储数据）*MYI*:(MYIndex，存储索引) **
+分类：
+* MYISAM：不支持事务、外键，但是访问速度快;<br>INNODB:支持事务提交、回滚和崩溃恢复，但是占空间大（保留数据与索引） 5.5版本默认选择
+* MEMORY:使用内存存储 * *.frm*  优点：访问速度快  缺点：服务器关闭，数据丢失，表存在.
+* **事务：是指作为单个逻辑单元执行的一系列操作，要么完全执行，要么完全不执行.**
+* **扩展名：<br> *.frm*:存储表定义 *MYD*:（MYData，存储数据）*MYI*:(MYIndex，存储索引) **
 ### SQL：（结构化查询语言）数据库语言
 <br> 分类：
-<br> * DDL（数据定义语言）：定义数据库对象，创建库、表、列等
-———————————————————————————————————————————
+|* DDL（数据定义语言）：定义数据库对象，创建库、表、列等.
+|———————————————————————————————————————————————|
+|* DML（数据操作语言）：操作表中的记录.
+|———————————————————————————————————————————————|
+|* DQL（数据查询语言）：查询数据库.
+|———————————————————————————————————————————————|
+|* DCL（数据控制语言）：用来定义访问控制权限和安全级别.
+|———————————————————————————————————————————————|
 
