@@ -4,7 +4,8 @@
 <br>如图所示：
 ![](https://github.com/0000fine/1032303971-qq.com/blob/Photos/%E4%BB%BF%E7%9C%9F%E5%9B%BE.png) 
 
-##
+
+
 ## 2.mysql服务设置远程连接 解决1251 client does not support ..问题
 ## 一、前期准备
 1、虚拟机/物理机    mysql环境（非本机）
@@ -21,3 +22,14 @@
 <br>ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword'; 
 <br>备注：更新一下用户的密码 root用户密码为newpassword
 
+
+
+## 3.mysql数据库学习笔记
+数据库：
+<br>RDBMS 关系数据库管理系统: 表（table）
+                            数据库（database）
+                            列（字段）
+                            行（记录）
+                            主键（唯一）
+                            外键（关联两个表）
+                            索引（目录）
