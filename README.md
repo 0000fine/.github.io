@@ -26,7 +26,7 @@
 
 ## **3.mysql数据库学习笔记**
 ### 数据库：
-<br>RDBMS 关系数据库管理系统:     
+RDBMS 关系数据库管理系统:     
     表（table）<br>    数据库（database）<br>    列（字段）<br>    行（记录）<br> 主键（唯一）<br>外键（关联两个表）<br>索引（目录）
 <br>###基础命令：
 <br>* create database 数据库名;  创建
