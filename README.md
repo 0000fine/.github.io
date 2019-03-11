@@ -4,20 +4,20 @@
 <br>如图所示：
 ![](https://github.com/0000fine/1032303971-qq.com/blob/Photos/%E4%BB%BF%E7%9C%9F%E5%9B%BE.png) 
 
-
-## mysql服务设置远程连接 解决1251 client does not support ..问题
+##
+## 2.mysql服务设置远程连接 解决1251 client does not support ..问题
 ## 一、前期准备
 1、虚拟机/物理机    mysql环境（非本机）
-2、本机 navicat软件（验证远程连接）
+<br>2、本机 navicat软件（验证远程连接）
 ## 二 、mysql配置
 1、在远程主机的本机   使用root用户连接mysql
-命令：mysql -u root -p
-备注 ： mysql -u 最高权限用户名 -p   再输入密码进入
-2、设置用户配置项
-(1) 查看用户信息
-select host,user,plugin,authentication_string from mysql.user;
-备注：host为 % 表示不限制ip   localhost表示本机使用    plugin非mysql_native_password 则需要修改密码
-(2)修改用户密码
-ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword'; 
-备注：更新一下用户的密码 root用户密码为newpassword
+<br>命令：mysql -u root -p
+<br>备注 ： mysql -u 最高权限用户名 -p   再输入密码进入
+<br>2、设置用户配置项
+<br>(1) 查看用户信息
+<br>select host,user,plugin,authentication_string from mysql.user;
+<br>备注：host为 % 表示不限制ip   localhost表示本机使用    plugin非mysql_native_password 则需要修改密码
+<br>(2)修改用户密码
+<br>ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword'; 
+<br>备注：更新一下用户的密码 root用户密码为newpassword
 
