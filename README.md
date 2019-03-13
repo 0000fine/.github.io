@@ -138,10 +138,24 @@ RDBMS 关系数据库管理系统:
 * 数据完整性：保证用户输入的数据保存到数据库中是否正确的.
 <br> 如何添加完整性：创建表的时候添加约束.分类：实体完整性、域完整性、引用完整性
 <br> 实体完整性：表中的一行代表一个实体.（不能重复）.行级约束.
-<br> 类型：主键（primary key）：每个表要有一个主键，数据唯一，不能为空.
+<br> 类型：
+<br> **主键（primary key）：每个表要有一个主键，数据唯一，不能为空.**
 <br> 添加方式：1.字段名1 类型1 primary key；
               2.字段名1 类型1，字段名2 类型2，primary key（字段名1，字段名2）；
-              3.Alter table 表名 add primary key（字段名）；</br>
+              3.Alter table 表名 add primary key（字段名）；
+<br> **唯一（unique）：不能重复，可以为空.**
+<br> 格式：create table 表名（字段名1 数据类型1，字段名2 数据类型2 unique）;
+<br> **自动增长列（Auto_increment）：指定列的数据自动增长，删除后，从删除后的序号开始.**
+<br> 格式:create table 表名（字段名1 数据类型 primary key Auto_increment）；
+* 域完整性：限制此单元格的数据正确，不对照此列的其他单元格比较.（域代表当前单元格）
+<br> 约束：
+<br> 数据类型：数值、日期、字符串类型.
+<br> 非空约束：not null.
+<br> 默认值约束: default.
+* 参照完整性：表与表之间的一种对应关系（可通过设置外键、主键与两表之间的触发器建立）.
+<br> 1.数据库的主键与外键一定要一致;
+<br> 2.两个表必须是INNODB类型;
+<br> create table score(sid int,score int, constraint sc_sf_fk foreign key(sid) references stu(id));
 <br>———————————————————————————————————————————
 * DCL（数据控制语言）：用来定义访问控制权限和安全级别.
 <br>———————————————————————————————————————————
